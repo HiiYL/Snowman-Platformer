@@ -21,7 +21,7 @@
             this.graphics.beginFill(0x000000,0);
             this.graphics.drawRect(0,0,25,25);
             //then adding a shape within it that will show the coin
-            this.graphics.beginFill(0xFFFFFF,1);
+            this.graphics.beginFill(0xFF0000,1);
             this.graphics.drawCircle(12.5,12.5,2.5);
         }
         private function eFrame(event:Event):void{

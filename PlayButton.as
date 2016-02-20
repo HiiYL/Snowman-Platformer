@@ -12,8 +12,8 @@
 		}
 		private function onClickRestart( mouseEvent:MouseEvent ):void 
 		{
-			_root.removeChild(this);
-			_root.gotoAndPlay('2');
+			this.parent.removeChild(this);
+			_root.gotoAndPlay(2);
 		}
 
 	}
