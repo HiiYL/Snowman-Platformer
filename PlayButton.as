@@ -13,7 +13,7 @@
 		private function onClickRestart( mouseEvent:MouseEvent ):void 
 		{
 			this.parent.removeChild(this);
-			_root.gotoAndPlay(2);
+			_root.gotoAndStop('Play');
 		}
 
 	}

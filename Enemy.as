@@ -52,8 +52,14 @@
                     //and remove listners
                     this.removeEventListener(Event.ENTER_FRAME, eFrame);
                     } else {
+						if(_root.lives.currentValue > 0 ) {
+							_root.lives.decrement();
+							_root.resetLvl();
+						}else {
+							_root.gotoAndStop('GameOver');
+						}
                     //otherwise, kill the main character
-                    _root.resetLvl();
+                    
                 }
             }
         }
