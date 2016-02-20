@@ -45,6 +45,8 @@
                 //if it touches the main guy while he's jumping
                 //and the guy is falling down, not jumping up
                 if(_root.mainJumping && _root.jumpSpeed > 0){
+					
+					_root.gameScore.addToValue(10);
                     //kill this guy
                     this.parent.removeChild(this);
                     //and remove listners

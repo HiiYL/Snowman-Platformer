@@ -31,8 +31,9 @@
             && _root.mcMain.x >= this.x + _root.lvlHolder.x - 10
             && _root.mcMain.y <= this.y + 10
             && _root.mcMain.y >= this.y - 10){
+				_root.gameScore.addToValue(1);
                 this.parent.removeChild(this);
-                removeEventListener(Event.ENTER_FRAME, eFrame);
+                this.removeEventListener(Event.ENTER_FRAME, eFrame);
             }
         }
     }
