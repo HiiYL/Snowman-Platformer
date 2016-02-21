@@ -12,7 +12,7 @@
 			// constructor code
 			addEventListener(Event.ADDED, beginClass);
 			super();
-			addToValue(10);
+			addToValue(4);
 		}
 		
 		private function beginClass(event:Event):void{

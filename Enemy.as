@@ -18,6 +18,7 @@
             //this code will constantly be run
             addEventListener(Event.ENTER_FRAME, eFrame);
 			addEventListener(Event.REMOVED_FROM_STAGE, removedFromStage);
+
         }
         private function beginClass(event:Event):void{
             //defining the root of the document
@@ -53,9 +54,10 @@
                     //and remove listners
                     this.removeEventListener(Event.ENTER_FRAME, eFrame);
                     } else {
+						_root.resetLvl();
 						if(_root.lives.currentValue > 0 ) {
 							_root.lives.decrement();
-							_root.resetLvl();
+
 						}else {
 							_root.gotoAndStop('GameOver');
 						}
