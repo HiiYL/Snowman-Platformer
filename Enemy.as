@@ -17,6 +17,7 @@
             addEventListener(Event.ADDED, beginClass);
             //this code will constantly be run
             addEventListener(Event.ENTER_FRAME, eFrame);
+			addEventListener(Event.REMOVED_FROM_STAGE, removedFromStage);
         }
         private function beginClass(event:Event):void{
             //defining the root of the document
@@ -63,5 +64,8 @@
                 }
             }
         }
+		private function removedFromStage(event:Event):void{
+			this.removeEventListener(Event.ENTER_FRAME, eFrame);
+		}
     }
 }

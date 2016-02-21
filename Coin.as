@@ -13,6 +13,7 @@
             addEventListener(Event.ADDED, beginClass);
             //this code will constantly be run
             addEventListener(Event.ENTER_FRAME, eFrame);
+			addEventListener(Event.REMOVED_FROM_STAGE, removedFromStage);
         }
         private function beginClass(event:Event):void{
             //defining the root of the document
@@ -27,14 +28,16 @@
         private function eFrame(event:Event):void{
             //hit testing with the coin and the main guy
             //we'll use math for this!
-            if(_root.mcMain.x <= this.x + _root.lvlHolder.x + 10
-            && _root.mcMain.x >= this.x + _root.lvlHolder.x - 10
-            && _root.mcMain.y <= this.y + 10
-            && _root.mcMain.y >= this.y - 10){
+
+			if(this.hitTestObject(_root.mcMain)){
+				trace("COIN DESTROYED");
 				_root.gameScore.addToValue(1);
                 this.parent.removeChild(this);
                 this.removeEventListener(Event.ENTER_FRAME, eFrame);
             }
         }
+		private function removedFromStage(event:Event):void{
+			 this.removeEventListener(Event.ENTER_FRAME, eFrame);
+		}
     }
 }
