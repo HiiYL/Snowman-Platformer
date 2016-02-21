@@ -59,7 +59,7 @@
 							_root.lives.decrement();
 
 						}else {
-							_root.gotoAndStop('GameOver');
+							_root.triggerGameOver();
 						}
                     //otherwise, kill the main character
                     
